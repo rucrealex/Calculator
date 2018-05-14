@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="calculator" class="com.rucrealex.Calculator">
+        <constructor-arg ref="multiply"/>
+        <constructor-arg ref="screen"/>
+    </bean>
+
+    <bean id="add" class="com.rucrealex.operations.Add"/>
+    <bean id="divide" class="com.rucrealex.operations.Divide"/>
+    <bean id="multiply" class="com.rucrealex.operations.Multiply"/>
+    <bean id="sub" class="com.rucrealex.operations.Sub"/>
+    <bean id="screen" class="com.rucrealex.screen.Screen"/>
+    <bean id="printer" class="com.rucrealex.screen.Printer"/>
+</beans>
